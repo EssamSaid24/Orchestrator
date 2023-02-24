@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orchestrator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+
+    <script defer src="main.js"></script>
+  </head>
+  <body id="body"  >
+    <header class="myheader">
+      <h1>RPA Development</h1>
+
+      <nav>
+        <ul class="parent">
+          <li>
+            <a href="http://localhost:3000/">
+              Home Page
+            </a>
+          </li>
+          <li><a href=""> About Us </a></li>
+          <li id="dark" class="mode">change mode</li>
+          <li><a href=""> Dashboard </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main"> 
+        <section>
+            <h1>
+                Create New Process
+            </h1>
+            <br>
+            <form >
+                <div class="nameProcess">
+                <label for="name">Name</label>
+                <input id="name" type="text"  required></div> 
+                <br>
+                <h2 class="hProcess">
+                    Process Priority
+                </h2>
+                <br>
+                <div class="process">
+                <label for="str">Low</label>
+                <input id="str" name="stand" type="radio" required>
+                <label for="nstr">Normal</label>
+                <input id="nstr" name="stand" type="radio" required>
+                <label for="nstrr">High</label>
+                <input id="nstrr" name="stand" type="radio" required>
+            </div>
+            <br>
+
+                <button class="btnProcess">Add</button>
+            </form>
+        </section>
+    </main>
+    <%- include("./partials/footer.ejs")  %> 
+    
+  </body>
+</html>

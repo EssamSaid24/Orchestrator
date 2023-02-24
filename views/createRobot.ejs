@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orchestrator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body id="body"  >
+    <%- include("./partials/header.ejs")  %> 
+    <main id="main"> 
+        <section>
+            <h1>
+                Create New Robot
+            </h1>
+            <br>
+            <form action="/createRobot" method="POST">
+                <label for="naame">Name </label>
+                <input id="naame" name="naame" type="text"  required> 
+                <br>
+                <label for="user_id">Related User</label>
+                <input id="user_id" name="user_id" type="number"  required> 
+                <br>
+
+                <label for="str">Standard</label>
+                <input id="str" name="stand" type="checkbox" >
+                <label for="nstr">Not Standard</label>
+                <input id="nstr" name="nstand" type="checkbox" >
+
+                <label for="att">Attended</label>
+                <input id="att" name="attend" type="checkbox" >
+                <label for="natt">Not Attended</label>
+                <input id="natt" name="nattend" type="checkbox" >
+
+
+
+                <br>
+                <button>Add</button>
+            </form>
+        </section>
+    </main>
+    <%- include("./partials/footer.ejs")  %> 
+  </body>
+</html>
